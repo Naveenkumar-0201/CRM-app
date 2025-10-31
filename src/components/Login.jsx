@@ -11,8 +11,8 @@ function Login({ onLogin }) {
     const storedUser = JSON.parse(localStorage.getItem("user"));
 
     if (storedUser && storedUser.email === email && storedUser.password === password) {
-      onLogin(); // ✅ update state in App.jsx
-      navigate("/dashboard"); // ✅ immediate route update
+      onLogin();
+      navigate("/dashboard"); 
     } else {
       alert("Invalid credentials!");
     }
