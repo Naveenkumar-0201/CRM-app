@@ -5,13 +5,11 @@ function Leads() {
   const [leads, setLeads] = useState([]);
   const [editIndex, setEditIndex] = useState(null); // track which lead is being edited
 
-  // Load leads from localStorage when component mounts
   useEffect(() => {
     const savedLeads = JSON.parse(localStorage.getItem("leads")) || [];
     setLeads(savedLeads);
   }, []);
 
-  // Save to localStorage whenever leads update
   useEffect(() => {
     localStorage.setItem("leads", JSON.stringify(leads));
   }, [leads]);
@@ -25,7 +23,7 @@ function Leads() {
     }
 
     if (editIndex !== null) {
-      // Update existing lead
+
       const updatedLeads = leads.map((item, index) =>
         index === editIndex ? lead : item
       );
