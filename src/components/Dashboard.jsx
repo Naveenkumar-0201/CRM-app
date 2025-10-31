@@ -5,7 +5,7 @@ function Dashboard() {
 
   return (
     <div className="container mt-5">
-      <h3>Welcome, {user?.name || "User"} 👋</h3>
+      <h3>Welcome, {user?.name || "User"} </h3>
       <p>This is your CRM dashboard. You can manage your leads and view analytics here.</p>
     </div>
   );
